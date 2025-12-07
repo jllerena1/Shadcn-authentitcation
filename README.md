@@ -65,9 +65,15 @@ npm run dev
 
 Script mejorado para gestionar tu repositorio Git fácilmente:
 
-### Modo Rápido (más común):
+### ⭐ Modo Automático (MÁS FÁCIL):
 ```bash
-bash update.sh "tu mensaje de commit"
+./update.sh
+```
+Detecta cambios, sugiere mensaje y hace todo automáticamente. Solo presiona Enter o escribe tu mensaje.
+
+### Modo Rápido con Mensaje:
+```bash
+./update.sh "tu mensaje de commit"
 ```
 Hace automáticamente: `add` → `commit` → `push`
 

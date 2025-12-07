@@ -14,14 +14,20 @@ Script batch para sistemas Windows.
 
 ## 🎯 Uso Básico
 
-### Modo Rápido (Add + Commit + Push):
+### ⭐ Modo Automático (MÁS FÁCIL - Sin argumentos):
 ```bash
-bash update.sh "tu mensaje de commit"
+./update.sh
+```
+El script detecta cambios, muestra qué cambió, sugiere un mensaje y hace todo automáticamente. Solo presiona Enter para usar el mensaje sugerido o escribe uno personalizado.
+
+### Modo Rápido con Mensaje:
+```bash
+./update.sh "tu mensaje de commit"
 ```
 
 ### Ver todas las opciones:
 ```bash
-bash update.sh help
+./update.sh help
 ```
 
 ## 📚 Todas las Opciones Disponibles
