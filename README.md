@@ -61,6 +61,29 @@ npm run dev
 - **Button** - Botón de envío
 - **Label** - Etiquetas de formulario
 
+## 🚀 Scripts de Actualización Rápida
+
+Para facilitar los commits y push, se incluyen scripts de actualización:
+
+### Uso rápido:
+```bash
+./update.sh "tu mensaje de commit"
+# o más corto:
+./up "tu mensaje de commit"
+```
+
+El script automáticamente:
+- ✅ Agrega todos los cambios
+- 💾 Hace commit con tu mensaje
+- 🚀 Sube los cambios a GitHub
+
+**Ejemplo:**
+```bash
+./up "Agregar validación de email"
+```
+
+Para más detalles, consulta `GUIA_SCRIPTS.md`
+
 ## 🔧 Personalización
 
 Puedes personalizar los colores y estilos editando:
