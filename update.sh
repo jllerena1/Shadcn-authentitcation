@@ -78,22 +78,20 @@ if [ -z "$1" ]; then
     git status -s
     echo ""
     
-    # Generar mensaje sugerido
-    AUTO_MESSAGE=$(generate_auto_message)
-    
-    # Pedir mensaje de commit
-    echo -e "${CYAN}💬 Mensaje de commit sugerido:${NC} ${GREEN}$AUTO_MESSAGE${NC}"
-    echo -e "${YELLOW}Presiona Enter para usar el mensaje sugerido o escribe uno nuevo:${NC}"
+    # Pedir mensaje de commit (obligatorio)
+    echo -e "${CYAN}💬 ¿Cuál es el mensaje del commit?${NC}"
+    echo -e "${YELLOW}Escribe el mensaje que describa los cambios:${NC}"
     read -r USER_MESSAGE
     
-    # Usar mensaje del usuario o el automático
+    # Validar que se proporcionó un mensaje
     if [ -z "$USER_MESSAGE" ]; then
-        COMMIT_MESSAGE="$AUTO_MESSAGE"
-        echo -e "${GREEN}✓ Usando mensaje automático${NC}"
-    else
-        COMMIT_MESSAGE="$USER_MESSAGE"
-        echo -e "${GREEN}✓ Usando tu mensaje personalizado${NC}"
+        echo -e "${RED}❌ Error: Debes proporcionar un mensaje de commit${NC}"
+        echo -e "${YELLOW}💡 Ejemplo: 'Agregar validación de email' o 'Corregir bug en formulario'${NC}"
+        exit 1
     fi
+    
+    COMMIT_MESSAGE="$USER_MESSAGE"
+    echo -e "${GREEN}✓ Mensaje: $COMMIT_MESSAGE${NC}"
     
     echo ""
     
