@@ -67,8 +67,8 @@ show_help() {
 if [ -z "$1" ]; then
     echo -e "${CYAN}🚀 Modo Automático - Actualización Inteligente${NC}\n"
     
-    # Verificar si hay cambios
-    if git diff --quiet && git diff --staged --quiet; then
+    # Verificar si hay cambios (modificados, en staging o sin trackear)
+    if git diff --quiet && git diff --staged --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
         echo -e "${YELLOW}⚠️  No hay cambios para commitear${NC}"
         exit 0
     fi
