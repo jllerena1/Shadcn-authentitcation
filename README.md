@@ -78,4 +78,3 @@ Puedes personalizar los colores y estilos editando:
 ## 📄 Licencia
 
 MIT
-
