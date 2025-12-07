@@ -63,23 +63,30 @@ npm run dev
 
 ## 🚀 Scripts de Actualización Rápida
 
-Para facilitar los commits y push, se incluyen scripts de actualización:
+Script mejorado para gestionar tu repositorio Git fácilmente:
 
-### Uso rápido:
+### Modo Rápido (más común):
 ```bash
-./update.sh "tu mensaje de commit"
-# o más corto:
-./up "tu mensaje de commit"
+bash update.sh "tu mensaje de commit"
+```
+Hace automáticamente: `add` → `commit` → `push`
+
+### Otras opciones disponibles:
+```bash
+bash update.sh add              # Agregar todos los cambios
+bash update.sh add archivo.txt  # Agregar archivo específico
+bash update.sh remove archivo.txt # Eliminar del staging
+bash update.sh commit "mensaje"  # Solo hacer commit
+bash update.sh push              # Solo hacer push
+bash update.sh status            # Ver estado
+bash update.sh help              # Ver todas las opciones
 ```
 
-El script automáticamente:
-- ✅ Agrega todos los cambios
-- 💾 Hace commit con tu mensaje
-- 🚀 Sube los cambios a GitHub
-
-**Ejemplo:**
+**Ejemplos:**
 ```bash
-./up "Agregar validación de email"
+bash update.sh "Agregar validación de email"
+bash update.sh add src/components/Button.tsx
+bash update.sh commit "Corregir bug"
 ```
 
 Para más detalles, consulta `GUIA_SCRIPTS.md`

@@ -2,26 +2,68 @@
 
 ## Script de Actualización Rápida
 
-He creado un script que facilita hacer commits y push de manera rápida y sencilla.
+Script mejorado que permite gestionar tu repositorio Git de manera rápida y sencilla con múltiples acciones.
 
 ## 📋 Scripts Disponibles
 
 ### `update.sh` (macOS/Linux)
-Script bash para sistemas Unix (macOS, Linux).
+Script bash completo con múltiples funciones.
 
 ### `update.bat` (Windows)
 Script batch para sistemas Windows.
 
 ## 🎯 Uso Básico
 
-### En macOS/Linux:
+### Modo Rápido (Add + Commit + Push):
 ```bash
-./update.sh "tu mensaje de commit"
+bash update.sh "tu mensaje de commit"
 ```
 
-### En Windows:
-```cmd
-update.bat "tu mensaje de commit"
+### Ver todas las opciones:
+```bash
+bash update.sh help
+```
+
+## 📚 Todas las Opciones Disponibles
+
+### 1. **Modo Rápido** (más común)
+```bash
+bash update.sh "mensaje del commit"
+```
+Hace automáticamente: `add` → `commit` → `push`
+
+### 2. **Agregar cambios**
+```bash
+# Agregar todos los cambios
+bash update.sh add
+
+# Agregar un archivo específico
+bash update.sh add src/components/Button.tsx
+```
+
+### 3. **Eliminar del staging**
+```bash
+bash update.sh remove archivo.txt
+```
+
+### 4. **Solo hacer commit**
+```bash
+bash update.sh commit "mensaje del commit"
+```
+
+### 5. **Solo hacer push**
+```bash
+bash update.sh push
+```
+
+### 6. **Ver estado**
+```bash
+bash update.sh status
+```
+
+### 7. **Ayuda**
+```bash
+bash update.sh help
 ```
 
 ## 📝 Ejemplos de Uso
